@@ -71,8 +71,9 @@ public class CyclicBarrierDemo {
             System.out.println("士兵" + i + "报道！");
             allSoldier[i] = new Thread(new Soldier(cyclic, "士兵 " + i));
             allSoldier[i].start();
-            if(i==5)
-                allSoldier[0].interrupt();
+            //中断任务
+//            if(i==5)
+//                allSoldier[0].interrupt();
         }
     }
 }
